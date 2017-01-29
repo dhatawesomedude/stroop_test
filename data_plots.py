@@ -53,3 +53,12 @@ def incongruent_plot(sorted_df):
 	# Tweak spacing to prevent clipping of ylabel
 	fig.tight_layout()
 	plt.show()
+
+def box_plot(data):
+	labels = ['congruent', 'Incongruent']
+	fig, ax = plt.subplots()
+	ax.boxplot(data, 0, 'gD', labels=labels, meanline=True, showfliers=True, showcaps=True)
+	ax.set_title('Box plot showing distribution and outliers')
+
+
+	plt.show()
